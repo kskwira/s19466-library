@@ -14,14 +14,20 @@ export class BookLibraryService {
 
   constructor(private http: HttpClient){}
 
+  getBook(id: number): Observable<Book> {
+    const url = `${this.baseUrl}/books/${id}`;
+    return this.http.get<Book>(url)
+  }
+
   getBooks(): Observable<Book[]> {
     const url = `${this.baseUrl}/books`;
     return this.http.get<Book[]>(url)
   }
 
-  getBook(id: number): Observable<Book> {
-    const url = `${this.baseUrl}/books/${id}`;
-    return this.http.get<Book>(url)
+  addBook(book: Book) {
+    const url = `${this.baseUrl}/books`;
+    let body = JSON.stringify(book);
+    return this.http.post(url, body, { headers: this.headers })
   }
 
   deleteBook(id: number) {

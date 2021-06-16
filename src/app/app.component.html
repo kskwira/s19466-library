@@ -1,43 +1,21 @@
-<!-- The drawer is always open in large screens. The header is always shown, even in small screens. -->
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">s19466-library</span>
+      <span class="mdl-layout-title">Book Library</span>
     </div>
   </header>
 
   <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">s19466-library</span>
+    <span class="mdl-layout-title">Book Library</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="#">Books List</a>
+      <a class="mdl-navigation__link" routerLink="dashboard">Dashboard</a>
+      <a class="mdl-navigation__link" routerLink="books">Books List</a>
+      <a class="mdl-navigation__link" routerLink="books/new">Add Book</a>
+      <a class="mdl-navigation__link" routerLink="about">About</a>
     </nav>
   </div>
 
   <main class="mdl-layout__content page-content">
-    <div class="books-list-title">
-      <h4 class="">Books List</h4>
-    </div>
-    <div class="content-container">
-      <div class="mdl-grid books-list-grid">
-        <div class="mdl-cell mdl-cell--3-col books-list-grid-left-col">
-          <ul class="list">
-            <li class="list-item" *ngFor="let book of booksList" (click)="getBookDetails(book.id)">
-              <div class="cover-image-container">
-                <span class="cover-image">
-                  <img [src]="book.coverImage" alt="cover image"/>
-                </span>
-              </div>
-              <div class="clear">
-                <div class="book-title">{{book.title}}</div>
-                <div class="book-author">{{book.authors}}</div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="mdl-cell mdl-cell--9-col books-list-grid-right-col">
-          <book-details [book]="selectedBook" (onDelete)="deleteBook($event)"></book-details>
-        </div>
-      </div>
-    </div>
+    <router-outlet></router-outlet>
   </main>
 </div>
