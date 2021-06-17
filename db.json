@@ -91,13 +91,18 @@
       "coverImage": "assets/img/9781849692380.jpg"
     },
     {
-      "isbn": "aaaa",
-      "title": "ssss",
-      "authors": "dddd",
-      "published": "aaa",
-      "description": "eeeee",
+      "isbn": "Orange",
+      "title": "Orange",
+      "authors": "Orange",
+      "published": "Orange",
+      "description": "Orange",
       "coverImage": "http://riviste.newbusinessmedia.it/wp-content/uploads/sites/27/2013/12/Fotolia_11313277_M.jpg",
       "id": 11
+    }
+  ],
+  "customers": [
+    {
+
     }
   ]
 }
