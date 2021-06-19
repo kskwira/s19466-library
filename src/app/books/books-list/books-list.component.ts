@@ -10,6 +10,7 @@ import { BookLibraryService } from "../book-library.service";
 export class BooksListComponent implements OnInit {
 
   booksList: Book[] = [];
+  searchText: string = '';
 
   constructor(private libraryService: BookLibraryService) {
   }

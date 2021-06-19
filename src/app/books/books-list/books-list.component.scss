@@ -1,6 +1,10 @@
 .books-list-container {
   overflow: auto;
   height: 100%;
+
+  .mdl-textfield {
+    margin: 2rem;
+  }
 }
 
 .books-list-title {
@@ -21,9 +25,14 @@
   height: auto;
   padding: 20px 0;
 
+  .mdl-card__subtitle-text {
+    height: 40px;
+    text-align: center;
+  }
+
   .mdl-card {
     width: 250px;
-    height: 348px;
+    height: 378px;
   }
 
   .book-card {
