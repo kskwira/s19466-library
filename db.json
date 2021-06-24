@@ -7,7 +7,9 @@
       "authors": "Jaime Pillora",
       "published": "February 2014",
       "description": "If you know JavaScript you ought to know Grunt – the Task Runner for managing sophisticated web applications. From a basic understanding to constructing your own advanced Grunt tasks, this tutorial has it all covered.",
-      "coverImage": "assets/img/9781783980628.jpg"
+      "coverImage": "assets/img/9781783980628.jpg",
+      "isRented": false,
+      "rentedById": 0
     },
     {
       "id": 2,
@@ -16,7 +18,9 @@
       "authors": "Alfred Nutile",
       "published": "September 2016",
       "description": "A recipe-based book to help you efficiently create amazing PHP-based applications with Laravel 5.x",
-      "coverImage": "assets/img/9781786462084.jpg"
+      "coverImage": "assets/img/9781786462084.jpg",
+      "isRented": false,
+      "rentedById": 0
     },
     {
       "id": 3,
@@ -25,7 +29,9 @@
       "authors": "Yogesh Patel",
       "published": "April 2016",
       "description": "Over 70 incredibly effective and practical recipes to get you up and running with Sitecore development",
-      "coverImage": "assets/img/9781784396527.jpg"
+      "coverImage": "assets/img/9781784396527.jpg",
+      "isRented": false,
+      "rentedById": 0
     },
     {
       "id": 4,
@@ -34,7 +40,9 @@
       "authors": "Bass Jobsen",
       "published": "April 2016",
       "description": "Over 120 practical and easy-to-understand recipes that explain how to use Sass and Compass to write efficient, maintainable, and reusable CSS code for your web development projects",
-      "coverImage": "assets/img/9781783286935.jpg"
+      "coverImage": "assets/img/9781783286935.jpg",
+      "isRented": false,
+      "rentedById": 0
     },
     {
       "id": 5,
@@ -43,7 +51,9 @@
       "authors": "Ved Antani",
       "published": "August 2016",
       "description": "Unlock the powers of functional programming hidden within JavaScript to build smarter, cleaner, and more reliable web apps.",
-      "coverImage": "assets/img/9781787124660.jpg"
+      "coverImage": "assets/img/9781787124660.jpg",
+      "isRented": false,
+      "rentedById": 0
     },
     {
       "id": 6,
@@ -52,7 +62,9 @@
       "authors": "Yuxian",
       "published": "August 2010",
       "description": "Test and debug JavaScript the easy way.",
-      "coverImage": "assets/img/9781849510004.jpg"
+      "coverImage": "assets/img/9781849510004.jpg",
+      "isRented": false,
+      "rentedById": 0
     },
     {
       "id": 7,
@@ -61,7 +73,9 @@
       "authors": "Ved Antani",
       "published": "January 2016",
       "description": "Explore and master modern JavaScript techniques in order to build large-scale web applications.",
-      "coverImage": "assets/img/9781785281341.jpg"
+      "coverImage": "assets/img/9781785281341.jpg",
+      "isRented": false,
+      "rentedById": 0
     },
     {
       "id": 8,
@@ -70,7 +84,9 @@
       "authors": "Rui Wang",
       "published": "July 2013",
       "description": "Microsoft Kinect changes the notion of user interface design. It differs from most other user input controllers as it enables users to interact with the program without touching the mouse or a trackpad. It utilizes motion sensing technology and all it needs is a real-time cameras, tracked skeletons, and gestures.",
-      "coverImage": "assets/img/9781849694384.jpg"
+      "coverImage": "assets/img/9781849694384.jpg",
+      "isRented": false,
+      "rentedById": 0
     },
     {
       "id": 9,
@@ -79,7 +95,9 @@
       "authors": "Dmitry Sheiko",
       "published": "December 2015",
       "description": "Improve your code maintainability, performance, and security through practical expert insights and unlock the full potential of JavaScript.",
-      "coverImage": "assets/img/9781785881572.jpg"
+      "coverImage": "assets/img/9781785881572.jpg",
+      "isRented": true,
+      "rentedById": 3
     },
     {
       "id": 10,
@@ -88,7 +106,9 @@
       "authors": "Abhijit Jana",
       "published": "December 2012",
       "description": "Kinect has been a game-changer in the world of motion games and applications since its first release. It has been touted as a controller for Microsoft Xbox but is much more than that. The developer version of Kinect, Kinect for Windows SDK, provides developers with the tools to develop applications that run on Windows. You can use this to develop applications that make interaction with your computer hands-free.",
-      "coverImage": "assets/img/9781849692380.jpg"
+      "coverImage": "assets/img/9781849692380.jpg",
+      "isRented": false,
+      "rentedById": 0
     },
     {
       "isbn": "Orange",
@@ -97,12 +117,23 @@
       "published": "Orange",
       "description": "Orange",
       "coverImage": "http://riviste.newbusinessmedia.it/wp-content/uploads/sites/27/2013/12/Fotolia_11313277_M.jpg",
+      "isRented": true,
+      "rentedById": 1,
       "id": 11
+    },
+    {
+      "isbn": "test",
+      "title": "test",
+      "authors": "test",
+      "published": "test",
+      "description": "test",
+      "coverImage": "test",
+      "isRented": true,
+      "rentedById": 2,
+      "id": 12
     }
   ],
   "customers": [
-    {
-
-    }
+    {}
   ]
 }

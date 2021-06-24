@@ -19,7 +19,7 @@ export class NewBookComponent implements OnInit {
     authors: new FormControl(''),
     published: new FormControl(''),
     description: new FormControl(''),
-    coverImage: new FormControl('')
+    coverImage: new FormControl(''),
   });
 
   constructor(private formBuilder: FormBuilder,
@@ -42,6 +42,8 @@ export class NewBookComponent implements OnInit {
   saveBook() {
     if (this.newBookForm.valid) {
       let book = this.newBookForm.value as Book;
+      book.isRented = false;
+      book.rentedById = 0;
       this.libraryService.addBook(book)
         .subscribe(res => this.router.navigate(['/Books']))
     }

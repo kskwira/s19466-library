@@ -1,4 +1,5 @@
 <div *ngIf="book">
+
   <div class="selected-book">
     <div class="selected-book-cover">
       <img [src]="book.coverImage" alt="cover image" class=""/>
@@ -11,14 +12,35 @@
       <p class="description">{{book.description}}</p>
     </div>
   </div>
+
   <div class="action-bar">
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
+    <button class="mdl-button mdl-js-button  mdl-button--raised"
             (click)="goBack()">
       Go Back
     </button>
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent"
             (click)="deleteBook(book.id)">
       Delete Book
     </button>
   </div>
+
+  <div *ngIf="!book.isRented; else elseBlock" class="action-bar2">
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+            (click)=rentBook(book.id)>
+      Rent
+    </button>
+    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+      <select class="mdl-textfield__input" id="customer" name="customer">
+        <option *ngFor="let customer of customers" >
+          {{customer}}
+        </option>
+      </select>
+    </div>
+  </div>
+  <ng-template #elseBlock>
+    <div class="action-bar2">
+      <p>Sorry, this book is already rented by: {{getCustomer(book.rentedById)}}</p>
+    </div>
+  </ng-template>
 </div>
+

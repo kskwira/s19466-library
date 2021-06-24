@@ -20,11 +20,22 @@ export class BookDetailsComponent implements OnInit {
 
   }
 
+  customers: string[] = ["Jacek", "Franek", "Tomek"];
+  show = false;
+
   ngOnInit() {
     this.route.params.subscribe(params => {
       this.libraryService.getBook(params['id'])
         .subscribe(book => this.book = book);
     })
+  }
+
+  getCustomer(id: number) {
+    return this.customers[id-1];
+  }
+
+  rentBook(id: number) {
+
   }
 
   deleteBook(id: number) {
