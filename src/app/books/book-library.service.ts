@@ -30,6 +30,11 @@ export class BookLibraryService {
     return this.http.post(url, body, { headers: this.headers })
   }
 
+  rentBook(book: Book) {
+    const url = `${this.baseUrl}/books/${book.id}`;
+    return this.http.put<Book>(url, book, {headers: this.headers})
+  }
+
   deleteBook(id: number) {
     const url = `${this.baseUrl}/books/${id}`;
     return this.http.delete(url, { headers: this.headers })

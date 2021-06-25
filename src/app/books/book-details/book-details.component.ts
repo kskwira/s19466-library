@@ -12,6 +12,13 @@ import {Location} from "@angular/common";
 export class BookDetailsComponent implements OnInit {
 
   book?: Book;
+  show = false;
+
+  customers  = [
+    {id: 1, name: "Jacek"},
+    {id: 2, name: "Franek"},
+    {id: 3, name: "Tomek"},
+  ];
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -19,9 +26,6 @@ export class BookDetailsComponent implements OnInit {
               private libraryService: BookLibraryService) {
 
   }
-
-  customers: string[] = ["Jacek", "Franek", "Tomek"];
-  show = false;
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -31,11 +35,25 @@ export class BookDetailsComponent implements OnInit {
   }
 
   getCustomer(id: number) {
-    return this.customers[id-1];
+    return this.customers[id-1].name;
   }
 
-  rentBook(id: number) {
+  toNumber(value: string) {
+    return Number(value);
+  }
 
+  rentBook(customerId: number, book: Book) {
+    book.rentedById = customerId;
+    book.isRented = true;
+    this.libraryService.rentBook(book)
+      .subscribe(res => this.router.navigate(['/books']))
+  }
+
+  returnBook(bookId: number, book: Book) {
+    book.rentedById = 0
+    book.isRented = false;
+    this.libraryService.rentBook(book)
+      .subscribe(res => this.router.navigate(['/books']))
   }
 
   deleteBook(id: number) {

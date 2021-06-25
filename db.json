@@ -96,8 +96,8 @@
       "published": "December 2015",
       "description": "Improve your code maintainability, performance, and security through practical expert insights and unlock the full potential of JavaScript.",
       "coverImage": "assets/img/9781785881572.jpg",
-      "isRented": true,
-      "rentedById": 3
+      "isRented": false,
+      "rentedById": 0
     },
     {
       "id": 10,
@@ -117,8 +117,8 @@
       "published": "Orange",
       "description": "Orange",
       "coverImage": "http://riviste.newbusinessmedia.it/wp-content/uploads/sites/27/2013/12/Fotolia_11313277_M.jpg",
-      "isRented": true,
-      "rentedById": 1,
+      "isRented": false,
+      "rentedById": 0,
       "id": 11
     },
     {
@@ -128,8 +128,8 @@
       "published": "test",
       "description": "test",
       "coverImage": "test",
-      "isRented": true,
-      "rentedById": 2,
+      "isRented": false,
+      "rentedById": 0,
       "id": 12
     }
   ],
