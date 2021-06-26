@@ -13,14 +13,8 @@ import {Customer} from "../customer";
 export class BookDetailsComponent implements OnInit {
 
   book?: Book;
-  customerss?: Customer[];
+  customersList: Customer[] = [];
   show = false;
-
-  customers  = [
-    {id: 1, name: "Jacek"},
-    {id: 2, name: "Franek"},
-    {id: 3, name: "Tomek"},
-  ];
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -34,10 +28,16 @@ export class BookDetailsComponent implements OnInit {
       this.libraryService.getBook(params['id'])
         .subscribe(book => this.book = book);
     })
+    this.getCustomersList();
   }
 
-  getCustomer(id: number) {
-    return this.customers[id-1].name;
+  getCustomersList() {
+    this.libraryService.getCustomers()
+      .subscribe(customers => this.customersList = customers);
+  }
+
+  getCustomerName(id: number) {
+    return this.customersList[id-1].name;
   }
 
   toNumber(value: string) {

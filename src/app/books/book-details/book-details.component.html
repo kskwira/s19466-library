@@ -31,7 +31,7 @@
     </button>
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
       <select class="mdl-textfield__input" #customerId >
-        <option *ngFor="let customer of customers" [value]="customer.id">
+        <option *ngFor="let customer of customersList" [value]="customer.id">
           {{customer.name}}
         </option>
       </select>
@@ -44,7 +44,7 @@
               (click)="returnBook(book.id, book)">
         Return
       </button>
-      <h4>Sorry, this book is already rented by: {{getCustomer(book.rentedById)}}</h4>
+      <h4>Sorry, this book is already rented by: {{getCustomerName(book.rentedById)}}</h4>
     </div>
   </ng-template>
 

@@ -9,6 +9,7 @@ import {BooksRoutingModule} from "./books-routing.module";
 import {BookLibraryService} from "./book-library.service";
 import { BookFilterPipe } from './book-filter.pipe';
 import { CustomersListComponent } from './customers-list/customers-list.component';
+import {CustomerFilterPipe} from "./customer-filter.pipe";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CustomersListComponent } from './customers-list/customers-list.componen
     BookDetailsComponent,
     NewBookComponent,
     BookFilterPipe,
-    CustomersListComponent
+    CustomersListComponent,
+    CustomerFilterPipe
   ],
   imports: [
     CommonModule,

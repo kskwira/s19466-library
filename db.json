@@ -126,27 +126,27 @@
     {
       "id": 1,
       "name": "Tomek",
-      "booksRentedIds": [1, 2, 4]
+      "booksRentedId": 4
     },
     {
       "id": 2,
       "name": "Jacek",
-      "booksRentedIds": []
+      "booksRentedId": 0
     },
     {
       "id": 3,
       "name": "Monika",
-      "booksRentedIds": []
+      "booksRentedId": 1
     },
     {
       "id": 4,
       "name": "Ania",
-      "booksRentedIds": [6]
+      "booksRentedId": 6
     },
     {
       "id": 5,
       "name": "Adam",
-      "booksRentedIds": []
+      "booksRentedId": 0
     }
   ]
 }
