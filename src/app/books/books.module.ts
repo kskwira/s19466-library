@@ -8,13 +8,15 @@ import {HttpClientModule} from "@angular/common/http";
 import {BooksRoutingModule} from "./books-routing.module";
 import {BookLibraryService} from "./book-library.service";
 import { BookFilterPipe } from './book-filter.pipe';
+import { CustomersListComponent } from './customers-list/customers-list.component';
 
 @NgModule({
   declarations: [
     BooksListComponent,
     BookDetailsComponent,
     NewBookComponent,
-    BookFilterPipe
+    BookFilterPipe,
+    CustomersListComponent
   ],
   imports: [
     CommonModule,

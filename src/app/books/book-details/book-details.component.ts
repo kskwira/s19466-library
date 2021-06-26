@@ -3,6 +3,7 @@ import { Book } from '../book';
 import {ActivatedRoute, Router} from "@angular/router";
 import {BookLibraryService} from "../book-library.service";
 import {Location} from "@angular/common";
+import {Customer} from "../customer";
 
 @Component({
   selector: 'book-details',
@@ -12,6 +13,7 @@ import {Location} from "@angular/common";
 export class BookDetailsComponent implements OnInit {
 
   book?: Book;
+  customerss?: Customer[];
   show = false;
 
   customers  = [

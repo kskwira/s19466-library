@@ -120,20 +120,33 @@
       "isRented": false,
       "rentedById": 0,
       "id": 11
-    },
-    {
-      "isbn": "test",
-      "title": "test",
-      "authors": "test",
-      "published": "test",
-      "description": "test",
-      "coverImage": "test",
-      "isRented": false,
-      "rentedById": 0,
-      "id": 12
     }
   ],
   "customers": [
-    {}
+    {
+      "id": 1,
+      "name": "Tomek",
+      "booksRentedIds": [1, 2, 4]
+    },
+    {
+      "id": 2,
+      "name": "Jacek",
+      "booksRentedIds": []
+    },
+    {
+      "id": 3,
+      "name": "Monika",
+      "booksRentedIds": []
+    },
+    {
+      "id": 4,
+      "name": "Ania",
+      "booksRentedIds": [6]
+    },
+    {
+      "id": 5,
+      "name": "Adam",
+      "booksRentedIds": []
+    }
   ]
 }

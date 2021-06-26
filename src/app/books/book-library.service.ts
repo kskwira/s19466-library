@@ -2,6 +2,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Book} from "./book";
 import {Injectable} from "@angular/core";
 import {Observable} from "rxjs";
+import {Customer} from "./customer";
 
 
 @Injectable({
@@ -38,5 +39,10 @@ export class BookLibraryService {
   deleteBook(id: number) {
     const url = `${this.baseUrl}/books/${id}`;
     return this.http.delete(url, { headers: this.headers })
+  }
+
+  getCustomers(): Observable<Customer[]> {
+    const url = `${this.baseUrl}/customers`;
+    return this.http.get<Customer[]>(url);
   }
 }
