@@ -31,4 +31,12 @@ export class CustomersListComponent implements OnInit {
       .subscribe(books => this.booksList = books);
   }
 
+  returnBook(customer: Customer, book: Book) {
+    book.rentedById = 0
+    book.isRented = false;
+    customer.booksRentedId = 0;
+    this.libraryService.rentCustomer(customer)
+      .subscribe(() => this.libraryService.rentBook(book).subscribe());
+  }
+
 }

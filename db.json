@@ -126,7 +126,7 @@
     {
       "id": 1,
       "name": "Tomek",
-      "booksRentedId": 4
+      "booksRentedId": 0
     },
     {
       "id": 2,
@@ -136,12 +136,12 @@
     {
       "id": 3,
       "name": "Monika",
-      "booksRentedId": 1
+      "booksRentedId": 0
     },
     {
       "id": 4,
       "name": "Ania",
-      "booksRentedId": 6
+      "booksRentedId": 0
     },
     {
       "id": 5,

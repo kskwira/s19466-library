@@ -11,7 +11,7 @@ import {Customer} from "./customer";
 export class BookLibraryService {
 
   baseUrl: string = 'http://localhost:4567';
-  headers = new HttpHeaders({'Content-Type': 'application/json'})
+  headers = new HttpHeaders({'Content-Type': 'application/json'});
 
   constructor(private http: HttpClient){}
 
@@ -39,6 +39,11 @@ export class BookLibraryService {
   deleteBook(id: number) {
     const url = `${this.baseUrl}/books/${id}`;
     return this.http.delete(url, { headers: this.headers })
+  }
+
+  rentCustomer(customer: Customer) {
+    const url = `${this.baseUrl}/customers/${customer.id}`;
+    return this.http.put<Customer>(url, customer, {headers: this.headers})
   }
 
   getCustomers(): Observable<Customer[]> {

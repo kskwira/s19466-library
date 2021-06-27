@@ -28,10 +28,6 @@ export class BookDetailsComponent implements OnInit {
       this.libraryService.getBook(params['id'])
         .subscribe(book => this.book = book);
     })
-    this.getCustomersList();
-  }
-
-  getCustomersList() {
     this.libraryService.getCustomers()
       .subscribe(customers => this.customersList = customers);
   }
@@ -40,27 +36,35 @@ export class BookDetailsComponent implements OnInit {
     return this.customersList[id-1].name;
   }
 
+  getCustomerId(id: number) {
+    return this.customersList[id-1].id;
+  }
+
   toNumber(value: string) {
     return Number(value);
   }
 
-  rentBook(customerId: number, book: Book) {
-    book.rentedById = customerId;
+  rentBook(customer: Customer, book: Book) {
+    book.rentedById = customer.id;
     book.isRented = true;
-    this.libraryService.rentBook(book)
-      .subscribe(res => this.router.navigate(['/books']))
+    customer.booksRentedId = book.id;
+    this.libraryService.rentCustomer(customer)
+      .subscribe(() => this.libraryService.rentBook(book)
+        .subscribe(() => this.router.navigate(['/books'])));
   }
 
-  returnBook(bookId: number, book: Book) {
+  returnBook(customer: Customer, book: Book) {
     book.rentedById = 0
     book.isRented = false;
-    this.libraryService.rentBook(book)
-      .subscribe(res => this.router.navigate(['/books']))
+    customer.booksRentedId = 0;
+    this.libraryService.rentCustomer(customer)
+      .subscribe(() => this.libraryService.rentBook(book)
+        .subscribe(() => this.router.navigate(['/books'])));
   }
 
   deleteBook(id: number) {
     this.libraryService.deleteBook(id)
-      .subscribe(res => this.router.navigate(['/books']));
+      .subscribe(() => this.router.navigate(['/books']));
   }
 
   goBack() {
