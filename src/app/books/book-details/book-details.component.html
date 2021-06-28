@@ -25,11 +25,11 @@
   </div>
 
   <div *ngIf="!book.isRented; else elseBlock" class="action-bar2">
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+    <button class="mdl-button mdl-button--raised mdl-button--colored"
             (click)="rentBook(customersList[toNumber(customerId.value) -1], book)">
       Rent
     </button>
-    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" >
+    <div class="mdl-textfield mdl-textfield--floating-label" >
       <select class="mdl-textfield__input" #customerId >
         <option *ngFor="let customer of customersList" [value]="customer.id">
           {{customer.name}}
@@ -40,7 +40,7 @@
 
   <ng-template #elseBlock>
     <div class="action-bar2">
-      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+      <button class="mdl-button mdl-button--raised mdl-button--colored"
               (click)="returnBook(customersList[getCustomerId(book.rentedById) -1], book)">
         Return
       </button>

@@ -7,7 +7,7 @@
       <ul class="mdl-list__item-secondary-content" *ngIf="customer.booksRentedId.length > 0">
         <li class="mdl-list__item-secondary-content" *ngFor="let book of booksList | customerFilter: customer.booksRentedId">
           {{book.title}}
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+          <button class="mdl-button mdl-button--raised mdl-button--colored"
                   (click)="returnBook(customer, book)">
             Return
           </button>

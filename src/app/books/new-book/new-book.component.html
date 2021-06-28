@@ -2,44 +2,44 @@
   <h4>Add a new book</h4>
 
   <form novalidate [formGroup]="newBookForm" (ngSubmit)="saveBook()">
-    <div class="mdl-textfield mdl-js-textfield">
+    <div class="mdl-textfield">
       <input class="mdl-textfield__input" type="text" id="isbn" formControlName="isbn">
       <label class="mdl-textfield--floating-label" for="isbn">ISBN</label>
     </div>
-    <div class="mdl-textfield mdl-js-textfield">
+    <div class="mdl-textfield">
       <input class="mdl-textfield__input" type="text" id="title" formControlName="title">
       <label class="mdl-textfield--floating-label" for="title">Book Title</label>
     </div>
     <br/>
 
-    <div class="mdl-textfield mdl-js-textfield">
+    <div class="mdl-textfield">
       <input class="mdl-textfield__input" type="text" id="authors" formControlName="authors">
       <label class="mdl-textfield--floating-label" for="authors">Authors</label>
     </div>
-    <div class="mdl-textfield mdl-js-textfield">
+    <div class="mdl-textfield">
       <input class="mdl-textfield__input" type="text" id="published" formControlName="published">
       <label class="mdl-textfield--floating-label" for="published">Published</label>
     </div>
     <br/>
 
-    <div class="mdl-textfield mdl-js-textfield floating-label-full">
+    <div class="mdl-textfield floating-label-full">
       <input class="mdl-textfield__input" type="text" id="description" formControlName="description">
       <label class="mdl-textfield--floating-label" for="description">Description</label>
     </div>
     <br/>
 
-    <div class="mdl-textfield mdl-js-textfield floating-label-full">
+    <div class="mdl-textfield floating-label-full">
       <input class="mdl-textfield__input" type="text" id="coverImage" formControlName="coverImage">
       <label class="mdl-textfield--floating-label" for="coverImage">Cover Image</label>
     </div>
     <br/>
 
-    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+    <button type="submit" class="mdl-button mdl-button--raised"
             [disabled]="newBookForm.invalid" (click)="goBack()">
       Save
     </button>
 
-    <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" (click)="goBack()">
+    <button type="submit" class="mdl-button mdl-button--raised mdl-button--accent" (click)="goBack()">
       Cancel
     </button>
   </form>

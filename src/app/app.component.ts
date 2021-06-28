@@ -6,6 +6,5 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 's19466-library';
 
 }

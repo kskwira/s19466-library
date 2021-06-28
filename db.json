@@ -111,15 +111,114 @@
       "rentedById": 0
     },
     {
+      "isbn": 9781421807553,
+      "title": "Andersen's fairy tales",
+      "authors": "Hans Christian Andersen",
+      "published": "1846",
+      "description": "Sixteen tales including \"Little Claus and Big Claus,\" \"Father's Always Right,\" and \"The Goblin and the Grocer.\"",
+      "coverImage": "assets/img/9781421807553.jpg",
+      "isRented": false,
+      "rentedById": 0,
+      "id": 12
+    },
+    {
+      "isbn": 9788804325963,
+      "title": "The Old Man and the Sea",
+      "authors": "Ernest Hemingway",
+      "published": "1952",
+      "description": "The Old Man and the Sea is one of Hemingway's most enduring works. Told in language of great simplicity and power, it is the story of an old Cuban fisherman, down on his luck, and his supreme ordeal -- a relentless, agonizing battle with a giant marlin far out in the Gulf Stream.",
+      "coverImage": "assets/img/9788804325963.jpg",
+      "isRented": false,
+      "rentedById": 0,
+      "id": 13
+    },
+    {
+      "isbn": 9780394446288,
+      "title": "The Sound of the Mountain",
+      "authors": "Yasunari Kawabata",
+      "published": "1996",
+      "description": "Shingo Ogata, a 62-year-old businessman living in Kamakura and working in Tokyo, is close to retirement. He is experiencing temporary lapses of memory, recalling strange and disturbing dreams upon waking, and hearing sounds, including the titular noise which awakens him from his sleep, \"like wind, far away, but with a depth like a rumbling of the earth.\" Shingo takes the sound to be an omen of his impending death. At the same time, he is repeatedly confronted with the passing away of friends and former fellow students.",
+      "coverImage": "assets/img/9780394446288.jpg",
+      "isRented": false,
+      "rentedById": 0,
+      "id": 14
+    },
+    {
+      "isbn": 9780679725251,
+      "title": "Moby Dick",
+      "authors": "Herman Melville",
+      "published": "1851",
+      "description": "The book is the sailor Ishmael's narrative of the obsessive quest of Ahab, captain of the whaling ship Pequod, for revenge on Moby Dick, the giant white sperm whale that on the ship's previous voyage bit off Ahab's leg at the knee.",
+      "coverImage": "assets/img/9780679725251.jpg",
+      "isRented": false,
+      "rentedById": 0,
+      "id": 15
+    },
+    {
+      "isbn": 9780394483283,
+      "title": "The Tale of Genji",
+      "authors": "Murasaki Shikibu",
+      "published": "1900",
+      "description": "The most famous work of Japanese literature and the world's first novel—written a thousand years ago and one of the enduring classics of world literature.",
+      "coverImage": "assets/img/9780394483283.jpg",
+      "isRented": false,
+      "rentedById": 0,
+      "id": 16
+    },
+    {
+      "isbn": 9780140707342,
+      "title": "Hamlet",
+      "authors": "William Shakespeare",
+      "published": "1603",
+      "description": "In this quintessential Shakespeare tragedy, a young prince's halting pursuit of revenge for the murder of his father unfolds in a series of highly charged confrontations that have held audiences spellbound for nearly four centuries. Those fateful exchanges, and the anguished soliloquies that precede and follow them, probe depths of human feeling rarely sounded in any art.",
+      "coverImage": "assets/img/9780140707342.jpg",
+      "isRented": false,
+      "rentedById": 0,
+      "id": 17
+    },
+    {
+      "isbn": 9780192802385,
+      "title": "Pride and Prejudice",
+      "authors": "Jane Austen",
+      "published": "1813",
+      "description": "Pride and Prejudice is a romance novel by Jane Austen, first published in 1813. The story charts the emotional development of the protagonist, Elizabeth Bennet, who learns the error of making hasty judgments and comes to appreciate the difference between the superficial and the essential. The comedy of the writing lies in the depiction of manners, education, marriage and money in the British Regency.",
+      "coverImage": "assets/img/9780192802385.jpg",
+      "isRented": false,
+      "rentedById": 0,
+      "id": 18
+    },
+    {
+      "isbn": 9781618955647,
+      "title": "The Divine Comedy",
+      "authors": "Dante Alighieri",
+      "published": "1315",
+      "description": "A long Italian narrative poem by Dante Alighieri, begun c. 1308 and completed in 1320, a year before his death in 1321. It is widely considered to be the pre-eminent work in Italian literature and one of the greatest works of world literature. The poem's imaginative vision of the afterlife is representative of the medieval world-view as it had developed in the Western Church by the 14th century.",
+      "coverImage": "assets/img/9781618955647.jpg",
+      "isRented": false,
+      "rentedById": 0,
+      "id": 19
+    },
+    {
+      "isbn": 9780192814517,
+      "title": "Othello",
+      "authors": "William Shakespeare",
+      "published": "1609",
+      "description": "Shakespeare's tragedy of jealousy and suspicion presented scene by scene in comic book format.",
+      "coverImage": "assets/img/9780192814517.jpg",
+      "isRented": false,
+      "rentedById": 0,
+      "id": 20
+    },
+    {
       "isbn": "Orange",
       "title": "Orange",
       "authors": "Orange",
       "published": "Orange",
-      "description": "Orange",
+      "description": "Orangegegegege",
       "coverImage": "http://riviste.newbusinessmedia.it/wp-content/uploads/sites/27/2013/12/Fotolia_11313277_M.jpg",
       "isRented": false,
       "rentedById": 0,
-      "id": 11
+      "id": 21
     }
   ],
   "customers": [
