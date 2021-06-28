@@ -2,14 +2,26 @@
   height: 100%;
   padding: 10px;
 
-  .mdl-textfield {
-    margin: 2rem;
-  }
-
   h4 {
     margin: 0;
     float: left;
   }
+
+  .mdl-list {
+
+    margin: 2rem;
+    font-size: medium;
+    font-weight: bold;
+
+    button {
+      margin-left: 10px;
+    }
+
+    li {
+      padding: 5px;
+    }
+  }
+
 }
 
 

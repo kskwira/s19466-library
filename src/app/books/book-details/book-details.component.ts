@@ -47,7 +47,7 @@ export class BookDetailsComponent implements OnInit {
   rentBook(customer: Customer, book: Book) {
     book.rentedById = customer.id;
     book.isRented = true;
-    customer.booksRentedId = book.id;
+    customer.booksRentedId.push(book.id);
     this.libraryService.rentCustomer(customer)
       .subscribe(() => this.libraryService.rentBook(book)
         .subscribe(() => this.router.navigate(['/books'])));
@@ -56,7 +56,8 @@ export class BookDetailsComponent implements OnInit {
   returnBook(customer: Customer, book: Book) {
     book.rentedById = 0
     book.isRented = false;
-    customer.booksRentedId = 0;
+    customer.booksRentedId.forEach((element, index) => {if (element == book.id)
+      customer.booksRentedId.splice(index, 1)});
     this.libraryService.rentCustomer(customer)
       .subscribe(() => this.libraryService.rentBook(book)
         .subscribe(() => this.router.navigate(['/books'])));

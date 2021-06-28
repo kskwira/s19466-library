@@ -1,18 +1,18 @@
 <div class="customers-list-container">
-  <h4>Customers List</h4>
+  <h4>Books rented by customers:</h4>
   <br/>
   <div class="mdl-list">
-    <ul class="mdl-list__item-primary-content" *ngFor="let customer of customersList">
+    <div class="mdl-list__item-primary-content" *ngFor="let customer of customersList">
       {{customer.name}}
-      <ul class="mdl-list__item-secondary-content" *ngIf="customer.booksRentedId != 0">
+      <ul class="mdl-list__item-secondary-content" *ngIf="customer.booksRentedId.length > 0">
         <li class="mdl-list__item-secondary-content" *ngFor="let book of booksList | customerFilter: customer.booksRentedId">
           {{book.title}}
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" (click)="returnBook(customer, book)">
-<!--                  (click)="returnBook(book.id, book)">-->
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+                  (click)="returnBook(customer, book)">
             Return
           </button>
         </li>
       </ul>
-    </ul>
+    </div>
   </div>
 </div>

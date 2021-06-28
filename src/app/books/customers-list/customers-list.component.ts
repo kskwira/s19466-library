@@ -16,7 +16,7 @@ export class CustomersListComponent implements OnInit {
   constructor(private libraryService: BookLibraryService) {
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.getCustomersList();
     this.getBooksList();
   }
@@ -34,9 +34,11 @@ export class CustomersListComponent implements OnInit {
   returnBook(customer: Customer, book: Book) {
     book.rentedById = 0
     book.isRented = false;
-    customer.booksRentedId = 0;
+    customer.booksRentedId.forEach((element, index) => {if (element == book.id)
+      customer.booksRentedId.splice(index, 1)});
     this.libraryService.rentCustomer(customer)
-      .subscribe(() => this.libraryService.rentBook(book).subscribe());
+      .subscribe(() => this.libraryService.rentBook(book)
+        .subscribe(() => location.reload()));
   }
 
 }

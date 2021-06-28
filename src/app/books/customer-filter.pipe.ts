@@ -6,11 +6,11 @@ import {Book} from "./book";
 })
 export class CustomerFilterPipe implements PipeTransform {
 
-  transform(items: Book[], searchId: number): any[] {
+  transform(items: Book[], searchId: number[]): any[] {
 
-    if (searchId != 0) {
+    if (searchId.length > 0) {
       return items.filter(it => {
-        return it.id == searchId;
+        return searchId.includes(it.id);
       });
     }
     else
