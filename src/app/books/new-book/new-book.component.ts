@@ -45,7 +45,7 @@ export class NewBookComponent implements OnInit {
       book.isRented = false;
       book.rentedById = 0;
       this.libraryService.addBook(book)
-        .subscribe(() => this.router.navigate(['/Books']))
+        .subscribe(() => this.router.navigate(['/books']))
     }
   }
 

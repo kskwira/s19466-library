@@ -1,7 +1,7 @@
 <section class="new-book-container">
   <h4>Add a new book</h4>
 
-  <form novalidate [formGroup]="newBookForm" (ngSubmit)="saveBook()">
+  <form novalidate [formGroup]="newBookForm" >
     <div class="mdl-textfield">
       <input class="mdl-textfield__input" type="text" id="isbn" formControlName="isbn">
       <label class="mdl-textfield--floating-label" for="isbn">ISBN</label>
@@ -35,7 +35,7 @@
     <br/>
 
     <button type="submit" class="mdl-button mdl-button--raised"
-            [disabled]="newBookForm.invalid" (click)="goBack()">
+            [disabled]="newBookForm.invalid" (click)="saveBook()">
       Save
     </button>
 
